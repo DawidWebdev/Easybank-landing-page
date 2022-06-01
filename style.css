@@ -314,7 +314,7 @@ footer
     .nav-content
     {
         transform: translateY(0px);
-        opacity: 1;
+        opacity: .7;
         position: relative;
         text-align: center;
         margin: 0;
@@ -468,6 +468,10 @@ footer
         font-size: 12px;
         margin-left: 1rem;
     }
+    .footer-nav
+    {
+        text-align: left;
+    }
 }
 
 @media (min-width: 1024px)
@@ -499,4 +503,86 @@ footer
         font-size: 14px;
         margin-left: 5rem;
     }   
+    .mockups
+    {
+        display: flex;
+        justify-content: center;
+        background-size: cover;
+        background-position: 200px 0;
+    }
+    .mockups img
+    {
+        height: 40vw;
+        width: 32.5vw;
+        transform: translate(25%, 60px);
+    }
+}
+
+@media (min-width: 1440px)
+{
+    .nav-logo
+    {
+        margin-left: 8rem;
+    }
+    nav .request-invite
+    {
+        margin-right: 8rem;
+    }
+    .content
+    {
+        padding: 0rem 8rem 0rem 8rem;
+        text-align: left;
+    }  
+    .container
+    {
+        text-align: left;
+        padding: 4rem 8rem 4rem 8rem;
+    }
+    .content h1
+    {
+        font-size: 60px;
+    }
+    .content p
+    {
+        font-size: 18px;
+    }
+    article
+    {
+        margin-right: 2rem;
+    }
+    .article-text
+    {
+        padding: 0 2rem .5rem 2rem;
+    }
+    .article-autor h6
+    {
+        font-size: 12px;
+    } 
+    .article-title h5
+    {
+        font-size: 20px;
+    }
+    .article-subtitle p 
+    {
+        margin-bottom: 1rem;
+        font-size: 16px;
+    }
+
+    .footer-nav a 
+    {
+        font-size: 14px;
+        margin-left: 8rem;
+    }   
+    .footer-container
+    {
+    padding: 2rem 8rem 3rem 8rem;
+    }
+    article img 
+    {
+        height: 13vw;
+    }
+    .mockups img
+    {
+        transform: translate(25%, 60px);
+    }
 }
