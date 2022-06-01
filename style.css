@@ -470,3 +470,33 @@ footer
     }
 }
 
+@media (min-width: 1024px)
+{
+    .content h1
+    {
+        font-size: 40px;
+    }
+    .content p
+    {
+        font-size: 14px;
+    }
+    .article-autor h6
+    {
+        font-size: 12px;
+    } 
+    .article-title h5
+    {
+        font-size: 14px;
+    }
+    .article-subtitle p 
+    {
+        margin-bottom: 1rem;
+        font-size: 12px;
+    }
+
+    .footer-nav a 
+    {
+        font-size: 14px;
+        margin-left: 5rem;
+    }   
+}
