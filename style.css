@@ -3,6 +3,7 @@
 :root{
 --Dark-Blue: hsl(233, 26%, 24%);
 --Lime-Green: hsl(136, 65%, 51%);
+--Lime-Green-lighter: hsl(136, 53%, 60%);
 --Bright-Cyan: hsl(192, 70%, 51%);
 --Grayish-Blue: hsl(233, 8%, 62%);
 --Light-Grayish-Blue: hsl(220, 16%, 96%);
@@ -73,10 +74,38 @@ nav
 
 .nav-content a
 {
+    position: relative;
     text-decoration: none;
     color: var(--Dark-Blue);
     font-weight: 400;
     font-size: 18px;
+    transition: all .25s ease-in-out;
+}
+
+.nav-content a:hover
+{
+    color: black;
+}   
+
+.nav-content a::after
+{
+    transition: all .25s ease-in-out;
+    opacity: 0;
+    content: '';
+    width: 70%;
+    height: 3px;
+    border-radius: 5px;
+    background: linear-gradient(90deg ,var(--Lime-Green), var(--Bright-Cyan));
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(10%, 10px);
+}
+
+.nav-content a:hover::after
+{
+    opacity: 1;
+    transform: translate(-50%, 10px);
 }
 
 .nav-content li 
@@ -194,11 +223,18 @@ p
     padding: .9rem 2rem .9rem 2rem;
     color: var(--White);
     font-weight: 700;
+    transition: all .1s ease-in-out;
+}
+
+.request-invite:hover
+{
+    cursor: pointer;
+    opacity: .6;
 }
 
 #section2
 {
-    background-color: var(--Very-Light-Gray);
+    background-color: var(--Light-Grayish-Blue);
 }
 
 .about-subtitle
@@ -208,7 +244,7 @@ p
 
 #section3
 {
-    background-color: var(--Light-Grayish-Blue);
+    background-color: var(--Very-Light-Gray);
 }
 
 article
@@ -243,6 +279,14 @@ article img
     margin: 1rem 0 1rem 0;
     font-weight: 600;
     font-size: 16px;
+    transition: all .2s ease;
+}
+
+.article-title h5:hover
+{
+    color: var(--Lime-Green-lighter);
+    opacity: .75;
+    cursor: pointer;
 }
 
 /* Footer */
@@ -267,6 +311,19 @@ footer
     display: flex;
     justify-content: space-around;
     margin-top: 1.5rem;
+    z-index: 999;
+}
+
+.social i
+{
+    color: white;
+    transition: all .3s ease;
+}
+
+.social i:hover
+{
+    color: var(--Lime-Green-lighter);
+    transform: translateY(-5px);
 }
 
 .footer-nav a
@@ -276,6 +333,12 @@ footer
     font-weight: 300;
     font-size: 16px;
     opacity: .8;
+    transition: all .2s ease;
+}
+
+.footer-nav a:hover
+{
+    color: var(--Lime-Green-lighter);
 }
 
 .footer-nav
@@ -286,6 +349,12 @@ footer
 .footer-nav li 
 {
     padding: .5rem;
+    transition: all .2s ease;
+}
+
+.footer-nav li:hover
+{
+    transform: translateX(10px);
 }
 
 /* Media Queries */
@@ -343,6 +412,7 @@ footer
 
     #section1
     {
+        background-color: var(--Very-Light-Gray);
         display: grid;
         grid-template-columns: 50% 50%;
         align-items: center;
